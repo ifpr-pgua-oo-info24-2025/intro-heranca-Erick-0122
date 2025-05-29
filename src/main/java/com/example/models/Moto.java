@@ -18,8 +18,7 @@ public class Moto extends Veiculo {
     }
 
     public String exibirDetalhe() {
-        return "Marca : " + getMarca() + "\nModelo :" + getModelo()
-                + "Ano : " + getAno() + "Numero de Portas : "
-                + getTipoguidao();
+       return super.exibirDetalhe()
+                + this.tipoguidao;
     }
 }

@@ -17,8 +17,9 @@ public class Carro extends Veiculo {
     }
 
     public String exibirDetalhe() {
-        return "Marca : " + getMarca() + "\nModelo :" + getModelo()
-                + "Ano : " + getAno() + "Numero de Portas : "
-                + getNportas();
+
+                return super.exibirDetalhe()
+                + this.nportas;
     }
+
 }

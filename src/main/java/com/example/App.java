@@ -11,10 +11,10 @@ public class App {
     Carro[] carro = new Carro[100];
     Scanner scan = new Scanner(System.in);
     int op = 1, estacx = 0, estacy = 0;
-
+    
     while(op != 0){
-
-      System.out.println("O que gostaria de fazer ?");
+      
+      System.out.println("\nO que gostaria de fazer ?");
       System.out.println("1)Adicionar Carro\n2)Adicionar Moto\n3)Exibir Veículos\n0)Sair");
       op = scan.nextInt();
       
@@ -26,8 +26,11 @@ public class App {
           String modelo;
           int ano, nportas;
 
+          carro[estacx] = new Carro ("a", "b", 0 , 0);
+
           System.out.println("Qual a marca ?");
           marca = scan.nextLine();
+          scan.nextLine();
           carro[estacx].setMarca(marca);
 
           System.out.println("Qual o modelo ?");
@@ -36,10 +39,12 @@ public class App {
 
           System.out.println("Qual o ano do carro ?");
           ano = scan.nextInt();
+          scan.nextLine();
           carro[estacx].setAno(ano);
 
           System.out.println("Quantas portas ?");
           nportas = scan.nextInt();
+          scan.nextLine();
           carro[estacx].setNportas(nportas);
 
           estacx++;
@@ -49,17 +54,19 @@ public class App {
         case 2:
 
           String tipoguidao;
-
+          moto[estacy] = new Moto("a", "b", 0, "vrum");
           System.out.println("Qual a marca ?");
           marca = scan.nextLine();
+          scan.nextLine();
           moto[estacy].setMarca(marca);
 
           System.out.println("Qual o modelo ?");
           modelo = scan.nextLine();
           moto[estacy].setModelo(modelo);
 
-          System.out.println("Qual o ano do carro ?");
+          System.out.println("Qual o ano da moto ?");
           ano = scan.nextInt();
+          scan.nextLine();
           moto[estacy].setAno(ano);
 
           System.out.println("Qual o tipo de guidao ?");
@@ -71,7 +78,7 @@ public class App {
         break;
 
         case 3:
-
+          String frase;
           System.out.println("Carros :");
 
           for(int i = 0; i < estacx; i++){
@@ -88,8 +95,6 @@ public class App {
 
       }
 
-      
-      break;
     }    
 
     scan.close();

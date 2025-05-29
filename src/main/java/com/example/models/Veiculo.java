@@ -36,6 +36,6 @@ public class Veiculo {
     }
 
     public String exibirDetalhe() {
-        return "Marca : " + getMarca() + "\nModelo :" + getModelo() + "Ano : " + getAno();
+        return "Marca : " + this.marca + "\nModelo :" + this.modelo + "Ano : " + this.ano;
     }
 }
