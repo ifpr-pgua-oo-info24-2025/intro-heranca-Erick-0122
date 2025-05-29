@@ -19,6 +19,6 @@ public class Moto extends Veiculo {
 
     public String exibirDetalhe() {
        return super.exibirDetalhe()
-                + this.tipoguidao;
+                + "\nTipo de guidao : " + this.tipoguidao;
     }
 }

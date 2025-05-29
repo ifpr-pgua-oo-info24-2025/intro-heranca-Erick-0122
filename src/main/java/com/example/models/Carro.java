@@ -19,7 +19,7 @@ public class Carro extends Veiculo {
     public String exibirDetalhe() {
 
                 return super.exibirDetalhe()
-                + this.nportas;
+                + "\nQntd de Portas :"+ this.nportas;
     }
 
 }

@@ -29,8 +29,8 @@ public class App {
           carro[estacx] = new Carro ("a", "b", 0 , 0);
 
           System.out.println("Qual a marca ?");
-          marca = scan.nextLine();
           scan.nextLine();
+          marca = scan.nextLine();
           carro[estacx].setMarca(marca);
 
           System.out.println("Qual o modelo ?");
@@ -56,8 +56,8 @@ public class App {
           String tipoguidao;
           moto[estacy] = new Moto("a", "b", 0, "vrum");
           System.out.println("Qual a marca ?");
-          marca = scan.nextLine();
           scan.nextLine();
+          marca = scan.nextLine();
           moto[estacy].setMarca(marca);
 
           System.out.println("Qual o modelo ?");
@@ -78,17 +78,21 @@ public class App {
         break;
 
         case 3:
-          String frase;
+
           System.out.println("Carros :");
 
           for(int i = 0; i < estacx; i++){
-             carro[i].exibirDetalhe();
+            if(carro[i] != null){
+              System.out.println("\nCarro["+ i + "]\n" + carro[i].exibirDetalhe());
+            }
           }
 
-          System.out.println("Motos :");
+          System.out.println("\nMotos :");
 
           for(int i = 0; i < estacy; i++){
-             moto[i].exibirDetalhe();
+            if(moto[i] != null){
+              System.out.println("\nMoto["+ i + "]" + moto[i].exibirDetalhe());
+            }
           }
 
         break;
